@@ -3,4 +3,11 @@
     <string name="checkbox">checkbox</string>
     <string name="name">name</string>
     <string name="password">password</string>
+
+    <string name="incorrect">Incorrect</string>
+    <string name="correct">Correct</string>
+
+    <string name="question_1">Usability adalah sebuah teknik pengujian untuk melihat sisi User Interface sebuah sistem</string>
+    <string name="question_2">SUS adalah salah satu teknik pengujian untuk melihat tingkat kepuasan user dalam menggunakan sebuah sistem</string>
+    <string name="question_3">Efficiency adalah salah satu bagian dari usability yang membahas mengenai waktu yang dibutuhkan user dalam menggunakan sistem tersebut</string>
 </resources>

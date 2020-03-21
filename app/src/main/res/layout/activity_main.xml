@@ -6,51 +6,55 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <ScrollView
+    <FrameLayout
+        android:id="@+id/frameContainer"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <RelativeLayout
+        <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            >
+            android:layout_height="match_parent">
 
-            <EditText
-                android:id="@+id/editUsername"
-                android:layout_width="wrap_content"
+            <RelativeLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:ems="10"
-                android:layout_marginTop="75dp"
-                android:inputType="textPersonName"
-                android:hint="Username"
-                />
+                android:gravity="center">
 
-            <EditText
-                android:id="@+id/editPassword"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:inputType="textPersonName"
-                android:layout_below="@id/editUsername"
-                android:hint="Password"
-                />
+                <EditText
+                    android:id="@+id/editUsername"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="75dp"
+                    android:ems="10"
+                    android:hint="Username"
+                    android:inputType="textPersonName" />
 
-            <Button
-                android:id="@+id/btnLogin"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Button"
-                android:layout_below="@id/editPassword"/>
+                <EditText
+                    android:id="@+id/editPassword"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/editUsername"
+                    android:ems="10"
+                    android:hint="Password"
+                    android:inputType="textPersonName" />
 
-            <CheckBox
-                android:id="@+id/checkBox"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/btnLogin"
-                android:text="Remember Me" />
+                <Button
+                    android:id="@+id/btnLogin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/editPassword"
+                    android:text="LOGIN" />
+
+                <CheckBox
+                    android:id="@+id/checkBox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/btnLogin"
+                    android:text="Remember Me" />
 
 
-        </RelativeLayout>
-    </ScrollView>
+            </RelativeLayout>
+        </ScrollView>
+    </FrameLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
