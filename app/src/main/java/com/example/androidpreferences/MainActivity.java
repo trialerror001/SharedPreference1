@@ -1,8 +1,10 @@
 package com.example.androidpreferences;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.nfc.Tag;
@@ -39,7 +41,31 @@ public class MainActivity extends AppCompatActivity {
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getApplicationContext(), HomeActivity.class));
+                inputPreferences();
+                String name = editName.getText().toString();
+                String pass = editPassword.getText().toString();
+                System.out.println("Username: "+name);
+                System.out.println("Password: "+pass);
+                if(name.equals("Admin") && pass.equals("Admin")){
+                    Intent i = new Intent(getApplicationContext(), HomeActivity.class);
+                    i.putExtra("name", editName.getText().toString());
+                    startActivity(i);
+                }else{
+                    AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
+                    builder.setCancelable(false);
+                    builder.setTitle("Login Failed");
+                    builder.setMessage("Your username or password is incorrect");
+
+                    builder.setPositiveButton("Try Again", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+
+                        }
+                    });
+                    builder.show();
+                }
+
+
             }
         });
   }
@@ -52,4 +78,22 @@ public class MainActivity extends AppCompatActivity {
        else
            chkRememberme.setChecked(false);
   }
+
+  private void inputPreferences(){
+        if(chkRememberme.isChecked()){
+            mEditor.putString("username", editName.getText().toString());
+            mEditor.putString("password", editPassword.getText().toString());
+            if(chkRememberme.isChecked())
+                mEditor.putString("checkbox", "True");
+            else
+                mEditor.putString("checkbox", "False");
+            mEditor.commit();
+        }else{
+            mEditor.putString("username", "");
+            mEditor.putString("password", "");
+            mEditor.putString("checkbox", "False");
+            mEditor.commit();
+        }
+  }
+
 }

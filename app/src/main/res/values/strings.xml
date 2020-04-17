@@ -10,4 +10,33 @@
     <string name="question_1">Usability adalah sebuah teknik pengujian untuk melihat sisi User Interface sebuah sistem</string>
     <string name="question_2">SUS adalah salah satu teknik pengujian untuk melihat tingkat kepuasan user dalam menggunakan sebuah sistem</string>
     <string name="question_3">Efficiency adalah salah satu bagian dari usability yang membahas mengenai waktu yang dibutuhkan user dalam menggunakan sistem tersebut</string>
+
+    <string name="usability_1">
+        Usability testing is all about getting real people to interact with a website, app, or other product you have built and observing their behavior and reactions to it.
+        Whether you start small by watching session recordings or go all out and rent a lab with eye-tracking equipment, usability testing is a necessary step to make sure you build an effective, efficient, and enjoyable experience for your users.
+    </string>
+
+    <string name="usability_2">
+        What is usability?
+    </string>
+
+    <string name="usability_3">
+        Usability testing is a method of testing the functionality of a website, app, or other digital product by observing real users as they attempt to complete tasks on it. 
+    </string>
+
+    <string name="usability_4">
+        The goal is to reveal areas of confusion and uncover opportunities to improve the overall user experience.
+    </string>
+
+    <string name="usability_5">
+        You will be able to use pass/fail measure of whether the user has managed to complete the task successfully.
+    </string>
+
+    <string name="usability_6">
+        The average task completion time of all the users participating in your usability testing therefore becomes a measure of efficiency.
+    </string>
+
+    <string name="usability_7">
+        This questionnaire is typically administered after the usability testing session has ended and asks the user to rank their experience of the site (along a number of parameters) from 1 – 5 (1=poor, 5= good).
+    </string>
 </resources>
